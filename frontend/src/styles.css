@@ -1,0 +1,81 @@
+.posts {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.categoryName {
+  font-size: 1.5em;
+}
+
+.sectionTitle {
+  text-decoration: underline;
+}
+
+.appTitle {
+  font-size: 6.5em;
+}
+
+.sortDropDown {
+  margin-bottom: 10px
+}
+
+.homeButton:hover {
+  text-decoration: underline;
+  text-decoration-color: blue;
+}
+
+.postAuthor {
+  font-size: 14px;
+  font-style: italic;
+}
+
+.postFooter {
+  margin-top: 25px;
+}
+
+.postFooterButtons {
+    display: inline-block;
+}
+
+.postFooterDate {
+  float:right;
+  font-size: 12px;
+
+}
+
+.postScore {
+  opacity: 1 !important;
+  padding-left: 8px;
+  padding-right: 8px;
+  cursor: default !important;
+}
+
+.postComment {
+  display: block;
+}
+
+.postCommentContent {
+  display: block;
+  margin: 10px 0;
+}
+
+.postTitleLink {
+  display: inline-block;
+  margin: 10px 0 5px;
+  color: #333 !important;
+}
+
+.postTitleLink:hover {
+  text-decoration: underline;
+}
+
+.postControlButtons {
+    float: right;
+    margin-top: 10px;
+}
+
+
+
+
+
