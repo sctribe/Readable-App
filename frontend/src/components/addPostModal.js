@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Button, Modal, FormGroup, FormControl, ControlLabel,} from 'react-bootstrap';
 import { capitalize } from '../helpers'
-import { addPost, editPost } from '../actions/posts';
+import { addPost, editPostContent } from '../actions/posts';
 import { getCommentForEdit, addNewComment, editComment } from '../actions/comments';
 
 //creates modals required to create post or comment
@@ -24,7 +24,7 @@ class PostModal extends Component {
     fixedCategory: PropTypes.string,
     actions: PropTypes.shape({
       addPost: PropTypes.func.isRequired,
-      editPost: PropTypes.func.isRequired,
+      editPostContent: PropTypes.func.isRequired,
       getCommentForEdit: PropTypes.func.isRequired,
       addNewComment: PropTypes.func.isRequired,
       editComment: PropTypes.func.isRequired,
@@ -86,7 +86,7 @@ class PostModal extends Component {
       if (post.parentId) {
         actions.editComment(this.state);
       } else {
-        actions.editPost(this.state);
+        actions.editPostContent(this.state);
       }
     } else if (post.parentId) {
       actions.addNewComment(this.state);
@@ -193,7 +193,7 @@ function mapStateToProps({ categoriesReducer }) {
 function mapDispatchToProps(dispatch) {
   return {
     actions: bindActionCreators(
-      { addPost, editPost, getCommentForEdit, addNewComment, editComment },
+      { addPost, editPostContent, getCommentForEdit, addNewComment, editComment },
       dispatch,
     ),
   };
